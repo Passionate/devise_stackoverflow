@@ -1,1 +1,23 @@
-root page
+<h2>Sign up</h2>
+
+<%= form_for(@user , :url => root_path) do |f| %>
+  <% if @user.errors.any?  %>
+  <ul>
+   <% @user.errors.full_messages.each do |msg| %>
+      <li><%= msg %></li>
+   <% end %>
+   </ul>
+  <% end -%>
+  <div><%= f.label :email %><br />
+  <%= f.email_field :email, :autofocus => true %></div>
+   <div><%= f.label :username %><br />
+  <%= f.text_field :username %></div>
+  
+<div><%= f.label :password %><br />
+  <%= f.password_field :password %></div>
+  
+  <div><%= f.label :password_confirmation %><br />
+  <%= f.password_field :password_confirmation %></div>
+
+  <div><%= f.submit "Sign up" %></div>
+<% end %>

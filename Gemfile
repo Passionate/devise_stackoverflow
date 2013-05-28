@@ -39,5 +39,8 @@ gem 'jquery-rails'
 
 group :development do
   gem 'sqlite3' , '1.3.7'
+    gem 'better_errors','0.7.0'
+    gem 'binding_of_caller','0.7.1'
+    gem 'meta_request' , '0.2.5'
 end
 
